@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="成都「包容」的假象——基于全国同口径婚恋调查数据、逻辑拆解与批判理论，论证成都男性对同性恋的包容度为何是全国倒数第一。">
+<meta property="og:title" content="成都「包容」的假象——一份基于数据与逻辑的拆解">
+<meta property="og:description" content="成都男性对同性恋的包容度，为什么是全国倒数第一——数据核验·逻辑拆解·理论锚点·参照系分析。">
+<meta property="og:type" content="article">
+<title>成都「包容」的假象——一份基于数据与逻辑的拆解</title>
+<style>
+  :root{
+    --paper:        #f4f1ea;
+    --paper-soft:   #faf8f3;
+    --card:         #fbfaf6;
+    --ink:          #2e2a25;
+    --ink-soft:     #55504a;
+    --ink-faint:    #8a847b;
+    --hairline:     #e0dacd;
+    --sage:         #7d8f7e;
+    --sage-deep:    #5f7260;
+    --terracotta:   #b0805e;
+    --terracotta-soft:#d8c3b0;
+    --dustyblue:    #71808e;
+    --dustyrose:    #b98f86;
+    --gold:         #b7a67f;
+    --serif: "Noto Serif SC","Source Han Serif SC","Songti SC",STSong,SimSun,Georgia,serif;
+    --sans:  "Noto Sans SC","PingFang SC","Source Han Sans SC","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--sans);
+    font-size:16.5px;
+    line-height:1.95;
+    letter-spacing:0.015em;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:880px;margin:0 auto;padding:0 40px;}
+  /* ============ HERO ============ */
+  .hero{
+    padding:110px 0 60px;
+    border-bottom:1px solid var(--hairline);
+    margin-bottom:0;
+    position:relative;
+  }
+  .hero .kicker{
+    font-size:12.5px;letter-spacing:0.42em;text-transform:uppercase;
+    color:var(--sage-deep);margin-bottom:30px;
+  }
+  .hero h1{
+    font-family:var(--serif);
+    font-weight:600;
+    font-size:44px;
+    line-height:1.35;
+    letter-spacing:0.02em;
+    margin-bottom:26px;
+    color:var(--ink);
+  }
+  .hero h1 .alt{color:var(--terracotta);font-weight:500;}
+  .hero .lede{
+    font-size:17px;color:var(--ink-soft);
+    max-width:640px;margin-bottom:38px;
+    font-family:var(--serif);
+  }
+  .hero .meta{
+    font-size:13px;color:var(--ink-faint);
+    letter-spacing:0.08em;
+    display:flex;gap:24px;flex-wrap:wrap;
+  }
+  .hero .meta span b{color:var(--ink-soft);font-weight:600;}
+  /* ============ SECTION ============ */
+  section{padding:74px 0;border-bottom:1px solid var(--hairline);}
+  .sec-head{display:flex;align-items:baseline;gap:20px;margin-bottom:38px;}
+  .sec-num{
+    font-family:var(--serif);
+    font-size:15px;color:var(--terracotta);
+    letter-spacing:0.3em;
+    border:1px solid var(--terracotta-soft);
+    border-radius:50%;
+    width:44px;height:44px;display:inline-flex;
+    align-items:center;justify-content:center;
+    flex-shrink:0;
+  }
+  .sec-title{
+    font-family:var(--serif);
+    font-size:27px;font-weight:600;letter-spacing:0.02em;
+    color:var(--ink);
+  }
+  .sec-sub{
+    font-size:14px;color:var(--ink-faint);margin-top:6px;
+    letter-spacing:0.05em;
+  }
+  h3{
+    font-family:var(--serif);
+    font-size:19px;font-weight:600;color:var(--sage-deep);
+    margin:36px 0 14px;
+    letter-spacing:0.02em;
+  }
+  p{margin-bottom:16px;color:var(--ink-soft);}
+  p strong{color:var(--ink);font-weight:650;}
+  .lead{font-family:var(--serif);font-size:17.5px;color:var(--ink);}
+  .small{font-size:13.5px;color:var(--ink-faint);}
+  .em{color:var(--terracotta);}
+  .sc{letter-spacing:0.08em;}
+  /* blockquote */
+  .pull{
+    border-left:3px solid var(--sage);
+    padding:6px 0 6px 26px;
+    margin:34px 0;
+    font-family:var(--serif);
+    font-size:19px;
+    color:var(--ink);
+    line-height:1.8;
+  }
+  .pull .who{
+    display:block;font-family:var(--sans);font-size:12.5px;
+    color:var(--ink-faint);margin-top:12px;letter-spacing:0.15em;
+  }
+  /* boxes */
+  .box{
+    background:var(--card);
+    border:1px solid var(--hairline);
+    border-radius:3px;
+    padding:26px 30px;
+    margin:28px 0;
+  }
+  .box h4{
+    font-family:var(--serif);font-size:15.5px;color:var(--sage-deep);
+    letter-spacing:0.1em;margin-bottom:14px;font-weight:600;
+  }
+  .box p:last-child{margin-bottom:0;}
+  .box.err{border-left:4px solid var(--terracotta);}
+  .box.ok{border-left:4px solid var(--sage);}
+  .box.flag{border-left:4px solid var(--dustyblue);}
+  .box.danger{border-left:4px solid var(--dustyrose);}
+  /* figure */
+  .fig{margin:42px 0;padding:30px 26px 22px;background:var(--paper-soft);border:1px solid var(--hairline);border-radius:3px;}
+  .fig .cap{font-size:13px;color:var(--ink-faint);text-align:center;margin-top:16px;letter-spacing:0.03em;}
+  .fig .cap b{color:var(--ink-soft);font-weight:600;}
+  /* data list */
+  .datalist{margin:20px 0 8px;border-top:1px solid var(--hairline);}
+  .drow{
+    display:flex;justify-content:space-between;align-items:baseline;
+    padding:12px 2px;border-bottom:1px solid var(--hairline);
+    font-size:15px;
+  }
+  .drow .k{color:var(--ink-soft);}
+  .drow .v{font-family:var(--serif);font-size:17px;color:var(--ink);white-space:nowrap;}
+  .drow .v em{color:var(--terracotta);font-style:normal;}
+  /* two col */
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin:26px 0;}
+  @media(max-width:720px){.cols{grid-template-columns:1fr;}}
+  /* tables */
+  table{width:100%;border-collapse:collapse;margin:24px 0;font-size:14.5px;}
+  th{
+    text-align:left;font-weight:600;color:var(--sage-deep);
+    padding:10px 12px;border-bottom:2px solid var(--hairline);
+    font-size:13px;letter-spacing:0.08em;
+  }
+  td{padding:11px 12px;border-bottom:1px solid var(--hairline);color:var(--ink-soft);}
+  td.num{font-family:var(--serif);color:var(--ink);text-align:right;white-space:nowrap;}
+  tr:hover td{background:var(--paper-soft);}
+  /* TOC */
+  .toc{
+    background:var(--paper-soft);
+    border:1px solid var(--hairline);
+    border-radius:3px;
+    padding:34px 40px;
+    margin:56px 0 0;
+  }
+  .toc h4{
+    font-family:var(--serif);font-size:13px;letter-spacing:0.34em;
+    color:var(--ink-faint);margin-bottom:22px;font-weight:600;
+  }
+  .toc a{
+    display:flex;gap:18px;align-items:baseline;
+    text-decoration:none;color:var(--ink-soft);
+    padding:9px 0;border-bottom:1px dashed var(--hairline);
+    font-size:15px;transition:color .2s;
+  }
+  .toc a:last-child{border-bottom:none;}
+  .toc a:hover{color:var(--terracotta);}
+  .toc .n{font-family:var(--serif);color:var(--terracotta);font-size:13px;flex-shrink:0;}
+  /* footer */
+  footer{padding:64px 0 90px;}
+  .src{font-size:12.5px;color:var(--ink-faint);line-height:2;margin-bottom:10px;}
+  .src a{color:var(--dustyblue);text-decoration:none;border-bottom:1px solid var(--hairline);}
+  .src a:hover{color:var(--terracotta);border-color:var(--terracotta-soft);}
+  .sign{
+    margin-top:44px;padding-top:24px;border-top:1px solid var(--hairline);
+    font-family:var(--serif);font-size:13.5px;color:var(--ink-faint);
+    letter-spacing:0.1em;
+  }
+  /* misc */
+  .label-tag{
+    display:inline-block;font-size:11px;letter-spacing:0.18em;
+    color:var(--ink-faint);border:1px solid var(--hairline);
+    padding:3px 10px;border-radius:2px;margin:2px 4px 2px 0;
+  }
+  .num-big{font-family:var(--serif);font-size:34px;color:var(--terracotta);line-height:1;}
+  .note{font-size:12.5px;color:var(--ink-faint);border-top:1px dashed var(--hairline);margin-top:20px;padding-top:12px;}
+</style>
+</head>
+<body>
+<!-- ================= HERO ================= -->
+<header class="wrap hero">
+  <div class="kicker">Observation &nbsp;·&nbsp; Data &nbsp;·&nbsp; Logic</div>
+  <h1>成都「包容」的假象<br><span class="alt">——成都男性对同性恋的包容度，为什么是全国倒数第一</span></h1>
+  <p class="lede">「成都对同性恋很包容」是中文互联网上流传最广的城市叙事之一。但同口径的全国调查给出的结论恰恰相反：<strong>在婚姻与家庭的维度上，成都男性对同性恋的包容度位居全国末位</strong>。本文要做三件事：把这个被叙事掩盖的结论说清楚；拆穿用来消解它的每一层话术；以及指出「创作多」与「包容度高」之间那条从未被分清的红线。</p>
+  <div class="box danger" style="max-width:680px;margin:0 0 40px;">
+    <h4>核心结论</h4>
+    <p><strong>① 成都男性对同性恋的包容度，全国倒数第一。</strong>同口径全国调查（32省份、83250份样本）里，成都男性被点名为「全国最不能接受同性恋的人群」——<strong>近 50% 直接认定同性恋是「心理变态」（全国最高）、40% 反对同性婚姻（报告称「远远高于全国其他地区」）</strong>。这不是「样本偏差」能消解的，因为全国所有省份都用同一把尺子量。</p>
+    <p><strong>② 「创作多」≠「包容度高」。</strong>成都（乃至俄罗斯）最可观察到的，只是同性题材创作的<strong>产出与消费流量高</strong>。产出高不证明对同性叙事的包容度高，更不证明对现实同性恋者的接纳度高——它甚至常常是后者被压缩之后的代偿。<strong>最有力的例子就在俄罗斯：一部耽美小说《天官赐福》的销量超过《哈利·波特》系列，而这恰恰发生在俄罗斯同性婚姻支持率约7%、对同性恋宣传全面设限的同一个国家。</strong></p>
+    <p><strong>③ 「不支持不反对」≠ 中立。</strong>在性少数权利的绝对尺度上，「不支持不反对」就是「不支持」。「相对中立」与「绝对中立」之间存在结构性落差。</p>
+  </div>
+  <div class="meta">
+    <span><b>主题</b>&nbsp; 城市叙事 / 公共态度 / 认知谬误</span>
+    <span><b>方法</b>&nbsp; 数据核验 · 逻辑拆解 · 理论锚点 · 参照系分析</span>
+    <span><b>日期</b>&nbsp; 2026-09</span>
+  </div>
+  <nav class="toc">
+    <h4>目 录</h4>
+    <a href="#s1"><span class="n">一</span><span>被误用的数据：婚恋平台调查的真相</span></a>
+    <a href="#s2"><span class="n">二</span><span>支持率与包容度：正相关是规律，不是例外</span></a>
+    <a href="#s3"><span class="n">三</span><span>成都的「包容」究竟是一种什么包容</span></a>
+    <a href="#s4"><span class="n">四</span><span>两种「中立」：政府如何定义，中间派如何接受</span></a>
+    <a href="#s5"><span class="n">五</span><span>从成都到世界：恐同的普遍性，与滤镜的偏差</span></a>
+    <a href="#s6"><span class="n">六</span><span>结语</span></a>
+    <a href="#src"><span class="n">附</span><span>参考文献与数据来源</span></a>
+  </nav>
+</header>
+<!-- ================= 1 ================= -->
+<section id="s1">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">一</span>
+      <div>
+        <div class="sec-title">被误用的数据</div>
+        <div class="sec-sub">婚恋平台调查的真相——为什么「样本保守」不能解释「成都垫底」</div>
+      </div>
+    </div>
+    <p class="lead">几乎所有「成都很包容」的反例，最终都会指向同一份调查：由世纪佳缘发布、中科院参与分析的全国婚恋观调查。它在「婚姻与家庭」这一维度上给出的结论是明确且反直觉的——<strong>成都男性对同性恋的接受度，在全国处于末位</strong>。这份调查与民间叙事的反差，正是解开整件事的第一把钥匙。</p>
+    <h3>1.1 叙事的谱系：「成都 GAY 都」已经流传了约二十年</h3>
+    <p>首先要破除一个错觉：「成都很包容 / 成都是 GAY 都」并不是短视频时代才被造出来的新梗，它是一条从 Web1.0 时代一路延续、每次媒介换代都被重新讲一遍的老叙事：</p>
+    <div class="box flag">
+      <div class="datalist">
+        <div class="drow"><span class="k"><b>2002</b> ·「成都同志关爱小组」在中英防艾合作项目下成立、开通热线，是国内最早由同性恋人群自我组织的社区机构之一——线下社群空间的起点</span><span class="v">线下空间</span></div>
+        <div class="drow"><span class="k"><b>2005</b> · 媒体报道成都有共同生活逾 20 年的同性伴侣（可追溯至 1980 年代中期）</span><span class="v">个案见报</span></div>
+        <div class="drow"><span class="k"><b>2006</b> ·《揭秘中国第一「GAY 都」：四川同性恋者众多的原因》在门户与论坛流传，「四川 / 成都 = 中国 GAY 都」的标签在 BBS 时代已经成型</span><span class="v">标签成型</span></div>
+        <div class="drow"><span class="k"><b>2009</b> ·《中国同性恋最多的十大城市排行榜》经搜狐女人、凤凰网传播，成都位列第三</span><span class="v">榜单固化</span></div>
+        <div class="drow"><span class="k"><b>2012</b> · 社会学者魏伟出版《公开：当代成都「同志」空间的形成和变迁》（上海三联书店），把成都作为中国同志空间的典型案例学术化</span><span class="v">学术背书</span></div>
+        <div class="drow"><span class="k"><b>2010s 至今</b> · 同一叙事在微博、小红书、TikTok 与英文旅游指南（GayOut、Unveil China 称成都为「China's most openly gay city / Gaydu」）中被一轮轮再生产</span><span class="v">跨平台再生产</span></div>
+      </div>
+      <p class="small" style="margin-top:14px;">这条谱系说明的恰恰是反面：<strong>一个说法流传了约二十年、并且「像常识」，并不等于它经过了检验。</strong>正因为它足够古老、足够顺口，它才更需要回到同口径数据面前被重新核对——古老是它的传播优势，不是它的证据。</p>
+    </div>
+    <h3>1.2 调查说了什么：成都男性的具体数字</h3>
+    <p class="lead">先说最硬的结论，不绕表格。在全国 <strong>32 个省份、83250 份有效样本</strong>的同口径调查里，<strong>成都男性被报告直接点名，判定为「全国最不能接受同性恋的人群」</strong>。具体到数字：<strong>近一半（近 50%）成都男性认为同性恋是「一种扭曲的心理变态」，这一比例全国最高；同时有 40% 的成都男性明确反对同性婚姻，报告原文的措辞是这一比例「远远高于全国其他地区」。</strong></p>
+    <p>给一把标尺对照：全国男性对同性婚姻的<strong>平均反对率是 35%、平均支持率只有 17%</strong>；最接纳的山东男性有 35.6% 能接受同性婚姻，最接纳的南京女性有 61.4% 认为同性恋是「正常的情感抉择」。<strong>也就是说，当别的地方还在讨论「支不支持」时，成都有近一半男性已经直接把同性恋定性成了「心理变态」——这是态度强度上的本质差别，而不只是百分比高低。</strong></p>
+    <p>下面先交代全国男女的总体背景，才更能看清成都为什么刺眼。2015年9月这份第五期调查中，男性对同性婚姻的反对率（35%）几乎是女性（18%）的两倍；即便在更温和的「如何看待同性恋现象」题上，男性反对率（28%）也显著高于女性（15%），女性支持率（27%）接近男性（14%）的两倍。全国均值的完整分布如下表：</p>
+    <div class="box flag">
+      <h4>核心数据（世纪佳缘 × 中科院，2015）</h4>
+      <div class="datalist">
+        <div class="drow"><span class="k">「你如何看待同性恋现象」——男性支持 / 中立 / 反对</span><span class="v"><em>14%</em> / 58% / 28%</span></div>
+        <div class="drow"><span class="k">「你如何看待同性恋现象」——女性支持 / 中立 / 反对</span><span class="v"><em>27%</em> / 58% / 15%</span></div>
+        <div class="drow"><span class="k">「是否赞成同性婚姻合法化」——男性反对</span><span class="v"><em>35%</em></span></div>
+        <div class="drow"><span class="k">「是否赞成同性婚姻合法化」——女性反对</span><span class="v"><em>18%</em></span></div>
+        <div class="drow"><span class="k">认为「传统观念与世俗眼光制约接纳」——男 / 女</span><span class="v">79% / 85%</span></div>
+      </div>
+      <p class="small" style="margin-top:14px;">分地区数据显示西南地区男性对同性婚姻的支持率明显偏低（支持约16%、反对约33%），而北京、河南、河北的男性支持率居全国前列；最接纳的山东男性有35.6%能接受同性婚姻（全国男性支持率仅17%），最接纳的南京女性有61.4%认为同性恋是「正常的情感抉择」。</p>
+    </div>
+    <div class="box danger">
+      <h4>一图锁定 · 成都男性三项垫底指标（正文数字汇总，全国32省份 · 83250 份样本）</h4>
+      <div class="datalist">
+        <div class="drow"><span class="k">认为同性恋是「一种扭曲的心理变态」——成都男性</span><span class="v"><em>近 50%</em>（全国最高）</span></div>
+        <div class="drow"><span class="k">对同性婚姻持反对态度——成都男性</span><span class="v"><em>40%</em>（报告原文：「远远高于全国其他地区」）</span></div>
+        <div class="drow"><span class="k">报告对成都男性的总判定</span><span class="v"><em>全国最不能接受同性恋的人群</em></span></div>
+      </div>
+      <p class="small" style="margin-top:14px;">注意这里不是模糊的「西南偏低」，而是报告点名的<strong>全国末位</strong>：在「病理化定性」（近半数直接判为心理变态）和「同性婚姻反对」（40%，远超全国男性35%的均值）这两个最强硬、最贴近家庭价值的维度上，成都男性同时垫底。</p>
+      <p class="small">一个需要预先澄清的反例：同一报告里广州男性对较宽泛的「同性恋现象」反对率接近七成，看起来比成都更高。这并不推翻成都垫底——两者<strong>口径不同</strong>：广州的高值出现在宽泛的「现象态度」题，而成都在更强硬的「病理化判断」与「同性婚姻」两题上被明确判定为全国末位。报告作者张佳芮把西南的保守归因于「传统习俗和观念相对保存得比较好」。不同提问口径下「最保守」的城市会有广州、成都两个名字，但成都在最硬的两维上垫底是报告白纸黑字的结论。</p>
+    </div>
+    <h3>1.3 先把最有力的反驳抛出来：「婚恋平台样本偏保守，这结论还算数吗？」</h3>
+    <p>看到「成都男性反对率全国垫底」，任何一个严谨的人第一反应都不该是照单全收，而应该是质疑。下面这个质疑，<strong>也正是我本人最初替成都做出的辩护——我一度以为它成立</strong>。所以值得认真对待、一步步拆开：</p>
+    <div class="box flag">
+      <h4>问题（Q）· 一个听起来无懈可击的反驳</h4>
+      <p>「这是一个<strong>婚恋平台</strong>做的调查。会注册婚恋平台、还认真填写婚恋问卷的人，本来就比一般人更看重传统婚姻、观念更保守。那么，在这样一个本身就偏保守的样本里测出成都反对率高，会不会只是<strong>样本偏保守</strong>造成的虚高？凭什么说它等于成都人真实的包容度低？」</p>
+      <p class="small">坦白说，我最初就是用这套逻辑想为成都「开脱」的。它非常符合直觉。但符合直觉不等于成立——请看下面的拆解。</p>
+    </div>
+    <p style="font-family:var(--serif);color:var(--sage-deep);font-size:16px;margin:26px 0 10px;"><b>第一步（A-1）· 先老老实实承认它对的那一半</b></p>
+    <p>这个反驳不是全错，它有一半是对的：<strong>婚恋平台用户整体确实比全人口更传统、更保守，因此这份调查的「绝对数值」会被系统性抬高。</strong>如果有人拿这里的某个百分比去断言「全中国到底有多少人恐同」，那确实会失真——这一半，我完全接受。</p>
+    <p style="font-family:var(--serif);color:var(--sage-deep);font-size:16px;margin:26px 0 10px;"><b>第二步（A-2）· 但它偷换了问题：我们比的从来不是绝对值，而是相对排名</b></p>
+    <p>真正的关键在于：这份调查里，<strong>全国所有省份的样本都来自同一个婚恋平台、同一套抽样与统计口径</strong>。换句话说，那层「保守滤镜」不是只罩在成都头上，而是被<strong>全国统一、等量</strong>地罩在每一个省份头上——没有任何一个省份例外。</p>
+    <div class="box err">
+      <h4>回答（A）· 一个常量，解释不了一个差异</h4>
+      <p>做一个最简单的思想实验：假设「婚恋平台偏保守」这件事，把全国每个省份的反对率都<strong>等量</strong>拉高了 10 个百分点——</p>
+      <p>成都男性从 40% 变成 50%；最接纳的某个省份，假设从 10% 变成 20%。<strong>所有人都被加了一模一样的 10 分，那么谁排第一、谁排倒数第一，分毫不变。</strong>成都仍然在最末，它和其他省份的差距也一点没有缩小。</p>
+      <p>这就是问题的核心：<strong>「婚恋平台偏保守」是全国所有省份共有的一个常量；而一个对所有人一视同仁的常量，在逻辑上根本无法解释「为什么偏偏是成都垫底」这个差异。</strong>你不能用一把同样的尺子，去单独证明某一个被它量出来最短的人其实不短。</p>
+    </div>
+    <div class="pull">
+      绝对数值会被样本属性污染；同一口径下的相对排名不会。
+      <span class="who">—— 比较的逻辑</span>
+    </div>
+    <p>把这两件事彻底分开，结论才会清楚：<strong>「绝对数值」</strong>回答的是「这个社会总体有多保守」，它确实会被婚恋平台样本抬高，引用时要谨慎；<strong>「相对排名」</strong>回答的是「成都在这套全国统一的标准里排第几」，它不受这层共有滤镜的任何影响。而本文论证成都垫底，从头到尾用的都是后者。</p>
+    <p>所以，「样本偏保守」不仅救不了成都，反而正因为它对全国一视同仁，<span class="em">成都在同口径下垫底，就只能是真垫底</span>——这也是我收回最初那套辩护的原因。</p>
+    <h3>1.4 那么，这份调查真正证明的是什么</h3>
+    <p>它证明的不是「成都恐同」这个粗糙的判断，而是更精确、也更难反驳的结论：</p>
+    <ul style="margin:18px 0 18px 26px;color:var(--ink-soft);line-height:2;">
+      <li><strong>在「婚姻与家庭」这个中国社会最传统的价值维度上</strong>，成都（以及西南）男性的接受度处于全国末段；</li>
+      <li>这种保守与「成都亚文化很开放」的民间体感并不矛盾——但前提是必须把「亚文化」拆开来看：<strong>成都开放的是「消费耽美幻想的空间」，而不是「接纳现实同性恋者的空间」</strong>（详见第三章）；</li>
+      <li>「成都包容」的叙事，错误地把<strong>「同性题材创作的产出与消费流量高」</strong>（一种以直女为主体、针对虚构文本的市场现象）偷换成了<strong>「对现实同性恋者的接纳」</strong>——创作多不等于包容度高，这两个概念必须严格区分，不能用一个笼统的「亚文化」把它们混为一谈。<strong>俄罗斯已经用数据把这条红线划出来了：《天官赐福》前三卷总发行量超 50 万册、连续两年霸榜小说销量第一，而俄罗斯同性婚姻支持率约 7%、同性恋宣传被入刑——创作繁荣与权利压迫，可以在同一个国家、同一批读者里同时达到极致。</strong></li>
+    </ul>
+    <div class="note">核验说明：成都男性的三项具体数字（近半数认为同性恋是「扭曲的心理变态」、同性婚姻反对率40%且「远远高于全国其他地区」、被总判定为「全国最不能接受同性恋的人群」）已从世纪佳缘第五期调查的官方媒体原文（上观新闻/中青网、新浪女性，2015-09-25，全国32省份、有效样本83250份）逐字核实。全国男女均值（男性婚姻反对35%、女性18%等）来自红网/新浪同题报道。广州男性「近七成反对」为另一提问口径，已在正文说明其与成都口径的差异，不以单一数字掩盖差别。</div>
+  </div>
+</section>
+<!-- ================= 2 ================= -->
+<section id="s2">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">二</span>
+      <div>
+        <div class="sec-title">支持率与包容度</div>
+        <div class="sec-sub">正相关是规律，不是例外——「反对率高但很包容」只是罕见的个例</div>
+      </div>
+    </div>
+    <p class="lead">要推翻成都数据，还有第二个听起来同样有道理的说法。先把它作为问题完整地抛出来：</p>
+    <div class="box flag">
+      <h4>问题（Q）·「我不支持同性婚姻，但我不歧视啊」</h4>
+      <p>「反对同性婚姻，不代表我不包容同性恋。我只是不认可『婚姻』这种形式而已，现实里我完全可以平等地对待他们。那么——婚姻支持率低，凭什么就能推出整体包容度低？」</p>
+    </div>
+    <p>这个说法放在<strong>单个个人</strong>身上并非全无道理，现实中确实存在「不支持婚姻、但善待身边同性恋」的个体。但一旦拿它来给一个<strong>地区</strong>辩护，它就把一个极端罕见的情形，偷换成了一种普遍规律。要回答它，不能靠举例，只能看群体层面的统计规律到底长什么样。</p>
+    <h3>2.1 规律：婚姻支持率与整体接纳度，几乎总是同向变动</h3>
+    <p>跨国数据提供了一个清晰的一致图景：一个社会的同性婚姻支持率，与其整体社会接纳度（邻里接纳、就业公平、公众宽容）<strong>高度同向</strong>。婚姻支持率在70%以上的西欧、北欧，同时也是全球性少数接纳度最高的地区；而婚姻支持率不足10%的前苏联地区、撒哈拉以南非洲，整体接纳度也处于全球末位。一个地区几乎不可能出现「婚姻支持率全球垫底、整体接纳度全球领先」的组合。</p>
+    <div class="fig">
+      <svg viewBox="0 0 760 330" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="婚姻支持率与整体接纳度正相关示意">
+        <defs>
+          <linearGradient id="band" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#7d8f7e" stop-opacity="0.14"/>
+            <stop offset="1" stop-color="#7d8f7e" stop-opacity="0.02"/>
+          </linearGradient>
+        </defs>
+        <!-- axes -->
+        <line x1="60" y1="270" x2="740" y2="270" stroke="#c9c2b4" stroke-width="1"/>
+        <line x1="60" y1="30" x2="60" y2="270" stroke="#c9c2b4" stroke-width="1"/>
+        <!-- 轴标题一律横排、从左到右阅读，不做竖排旋转 -->
+        <text x="60" y="20" font-size="12" fill="#8a847b" font-family="serif">整体社会接纳度（纵轴：下低 ↑ 上高）</text>
+        <text x="740" y="292" font-size="12" fill="#8a847b" text-anchor="end" font-family="serif">同性婚姻支持率（横轴：左低 → 右高）</text>
+        <!-- 两端明确标注 低 / 高，方向无歧义 -->
+        <text x="68" y="286" font-size="11" fill="#b0a99a" font-family="sans-serif">低</text>
+        <text x="732" y="286" font-size="11" fill="#b0a99a" text-anchor="end" font-family="sans-serif">高</text>
+        <text x="48" y="274" font-size="11" fill="#b0a99a" text-anchor="end" font-family="sans-serif">低</text>
+        <text x="48" y="36" font-size="11" fill="#b0a99a" text-anchor="end" font-family="sans-serif">高</text>
+        <!-- trend band -->
+        <path d="M70 255 Q 260 200 400 130 T 730 60 L 730 150 Q 520 200 400 190 T 70 270 Z" fill="url(#band)"/>
+        <path d="M70 255 Q 260 200 400 130 T 730 60" fill="none" stroke="#5f7260" stroke-width="1.6" stroke-dasharray="4 3"/>
+        <!-- low-support region -->
+        <ellipse cx="150" cy="232" rx="52" ry="30" fill="none" stroke="#b0805e" stroke-width="1.4"/>
+        <text x="150" y="236" font-size="12.5" fill="#a06b4b" text-anchor="middle" font-family="serif">前苏联 / 撒哈拉以南</text>
+        <!-- high-support region -->
+        <ellipse cx="640" cy="92" rx="66" ry="32" fill="none" stroke="#5f7260" stroke-width="1.4"/>
+        <text x="640" y="96" font-size="12.5" fill="#5f7260" text-anchor="middle" font-family="serif">西欧 / 北欧</text>
+        <!-- china position -->
+        <circle cx="418" cy="150" r="5" fill="#b98f86"/>
+        <text x="418" y="126" font-size="12.5" fill="#b98f86" text-anchor="middle" font-family="serif">中国（中低段）</text>
+        <text x="60" y="306" font-size="11.5" fill="#8a847b" font-family="sans-serif">注：示意曲线；纵向为综合接纳度（就业公平、邻里接纳、公众宽容等）。核心结论：婚姻支持率低的地区，整体接纳度几乎不可能高。</text>
+      </svg>
+      <div class="cap"><b>图 1</b> · 同性婚姻支持率与整体社会接纳度呈强正相关——「反对率高但极包容」的地区在跨国数据中几乎不存在</div>
+    </div>
+    <h3>2.2 中国内部：维度之间有差值，但方向高度一致</h3>
+    <p>威廉姆斯研究所2024年5月发布的《中国大陆公众对LGBTQ群体的态度》报告（近3000份有效样本）给出了中国内部各维度的精确分布：</p>
+    <table>
+      <tr><th>态度维度</th><th style="text-align:right;">同意比例</th><th>说明</th></tr>
+      <tr><td>LGBTQ学生应免受校园霸凌</td><td class="num">68%</td><td>保护性维度，认可度最高</td></tr>
+      <tr><td>职场应公平对待 LGBTQ 员工</td><td class="num">62%</td><td>反歧视维度</td></tr>
+      <tr><td>社会应接纳 LGBTQ 群体</td><td class="num">53%</td><td>总体接纳</td></tr>
+      <tr><td>支持同性婚姻</td><td class="num">52%</td><td>制度权利维度</td></tr>
+      <tr><td>愿意参加同性婚礼</td><td class="num">46%</td><td>个人参与意愿</td></tr>
+      <tr><td>不介意 LGBTQ 邻居</td><td class="num">46%</td><td>邻里接纳（另有39%「比较不介意」）</td></tr>
+      <tr><td>不介意在媒体看到 LGBTQ 内容</td><td class="num">45%</td><td>公共可见度维度，认可度最低之一</td></tr>
+    </table>
+    <p>注意这组数字的两个特征：<strong>其一</strong>，各维度之间的确存在差值——「保护学生」（68%）高于「婚姻」（52%）——这说明态度确有分层，并非铁板一块；<strong>其二</strong>，所有维度都在同一方向上波动，没有一个维度出现「婚姻支持率暴跌、其他维度全部飙升」的背离。差值解释的是「层级差异」，不是「方向反转」。</p>
+    <div class="box ok">
+      <h4>关键推论</h4>
+      <p>婚姻支持率低 → 整体包容度低，在绝大多数情况下是成立的默认推论。中国社会确实存在一批「不支持同性婚姻、但不干涉个人生活」的中间群体，这构成了态度分层中的「温和层」；但它只是把整体接纳度从「极端排斥」抬升到「有限宽容」，并不能把一个人的态度从「保守」翻转为「开放」。</p>
+      <p>因此，<strong>「成都婚恋维度全国垫底」指向的默认推论，是成都整体包容度处于全国中下游——而不是「成都其实很包容」。</strong>除非出现极端的反例证据，否则没有理由假设成都会是那99%之外的例外。</p>
+    </div>
+    <h3>2.3 「维度差值」说明的是态度分层，不是「成都悖论」</h3>
+    <p>2014年首份中国LGBT社会环境调查与CGSS数据共同勾勒出中国的「枣核型」分布：完全接纳的约两成、明确排斥的约三成、中间约五成「不干涉但也不主动支持」。世界价值观调查（WVS）则显示，仅7%的中国人认为同性恋「完全正当」，但53%认为社会应接纳LGBTQ群体——<strong>道德判断上的否定，与权利层面的宽容，在中国大众中并行不悖</strong>。</p>
+    <p>这套结构非常重要：它说明「中间群体」的真实态度是<strong>「道德上不认同、行动上不干涉、制度上不支持」</strong>。它不是真正的包容——它只是不作为。把这种「不作为」包装成「包容」，恰恰是「成都叙事」最隐蔽的偷换。</p>
+    <h3>2.4 最有力的例证：李银河2007年调查的「维度分离」</h3>
+    <p>中国性学研究先驱李银河2007年对全国大中城市的电话抽样调查，为我们提供了「维度分离」最完整、最经典的一组数据。它同时展示了中国公众在<strong>不同维度上可以有多么悬殊的态度</strong>：</p>
+    <table>
+      <tr><th>调查维度</th><th style="text-align:right;">数据</th><th>解读</th></tr>
+      <tr><td>同性恋者应享有与异性恋同等的就业机会</td><td class="num">91% 赞成</td><td>抽象的公民权认知维度——接纳度极高（同期美国为86%）</td></tr>
+      <tr><td>同性恋者与异性恋者人格平等</td><td class="num">约 80%</td><td>抽象的价值判断维度——接纳度高</td></tr>
+      <tr><td>同性恋题材影视是否允许在国内公开播放</td><td class="num">约55%赞成 / 40%+反对</td><td>公共可见度维度——势均力敌、严重分裂</td></tr>
+      <tr><td>「如何看待同性恋行为」（另一调查）</td><td class="num">20.8%「完全没错」/ 37.8%「完全错误」</td><td>道德评价维度——否定性评价占多数</td></tr>
+    </table>
+    <p>这组数据揭示了一个被「李银河：中国公众比西方更包容」这句话遮蔽的真相：<strong>中国公众的「高接纳」高度集中在「抽象的、不涉切身」的权利与人格认知上</strong>（因为它不要求任何行为改变、不触及任何人的生活），而一旦问题下沉到「道德评价」（同性恋到底有没有错）或「公共可见度」（能不能在屏幕上看到），态度立刻分化甚至倒转。</p>
+    <p>这正是「维度分离」最权威的例证——它证明<strong>「在某个抽象维度上的高接纳」绝不能外推为「在所有维度上的包容」</strong>。回到成都：民间体感的「开放」对应的是李银河数据里91%的「就业权利」那一层（抽象、与己无关、不涉及真实接触）；婚恋调查测的则是37.8%「完全错误」那一层（贴近家庭与道德秩序的最深处）。两个数据同时为真，但它们指的根本不是同一件事。</p>
+  </div>
+</section>
+<!-- ================= 3 ================= -->
+<section id="s3">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">三</span>
+      <div>
+        <div class="sec-title">成都的「包容」究竟是一种什么包容</div>
+        <div class="sec-sub">概念拆解与逻辑闭合——从笼统的「亚文化」到精确的「耽美幻想消费」</div>
+      </div>
+    </div>
+    <p class="lead">必须首先承认：<strong>「成都亚文化很开放」这个表述本身是模糊的，甚至是有误导性的。</strong>如果「亚文化」这个伞盖把同性恋内容也罩在里面，又说它「包容度高」，而与此同时同性婚姻支持率全国垫底——这在逻辑上无法自洽。唯一的出路，是把「亚文化」这个概念拆开，逐个命题验证。</p>
+    <p class="lead">到这里，一定有人会拿出最直观的反证。先把这个问题摆到台面上：</p>
+    <div class="box flag">
+      <h4>问题（Q）·「可成都的酒吧、漫展、耽美网文明明火成这样，还不算包容？」</h4>
+      <p>「你说成都男性垫底，可现实里成都的同性酒吧、漫展同人、耽美网文与二创多到数不清，年轻人聊起男男爱情毫不避讳，这是看得见、摸得着的开放。这么旺盛的亚文化，难道不正是包容度高的铁证吗？」</p>
+    </div>
+    <p>这个反驳的问题，出在「亚文化」这个词太笼统——它把好几件主语完全不同的事打包成了一件。要回答它，第一步不是争论，而是先把这个笼统的词拆开。</p>
+    <h3>3.1 概念的澄清：「亚文化」必须被拆解</h3>
+    <p>「亚文化」不是一个可测量的单一对象，至少可以拆成三个彼此独立、主语不同的命题。而且必须先立一条铁律：<strong>「创作多」不等于「创作包容度高」，更不等于「现实接纳度高」</strong>——前者是产出与流量的事实，后两者是社会态度的判断，不能混为一谈。</p>
+    <div class="box err">
+      <h4>铁律的实证：俄罗斯的耽美销量，与它的恐同程度同时创下纪录</h4>
+      <p>最能说明「创作多 ≠ 包容度高」的，不是成都，而是俄罗斯。俄罗斯图书联盟的销售数据显示：中国耽美小说《天官赐福》的前三部<strong>连续两年位居俄罗斯小说销量榜首，整体销量已超越 J.K. 罗琳的《哈利·波特》系列</strong>；2024 年上半年，《天官赐福》更以 9200 万卢布（约合 756 万元人民币）销售额登顶俄罗斯图书综合畅销榜第一，位列第二的作品（3430 万卢布）销售额还不到它的一半。单是前三卷的总发行量就超过 50 万册——对俄罗斯图书市场而言是惊人的数字。</p>
+      <p>而这一切，发生在一个<strong>同性婚姻全国支持率约 7%、同性恋「宣传」被明文立法限制、最高法院把「国际LGBT运动」定性为极端组织</strong>的国家。同一个俄罗斯：买耽美小说买到断货，对现实同性恋者全面设限。<strong>市场规模与权利处境，可以毫无关联地背向而行。</strong></p>
+      <p class="small">对成都的启示正在于此：如果把「耽美卖爆」当成「包容度高」的证据，那就等于承认俄罗斯是全球对同性恋最包容的国家之一——这个结论荒谬到没人愿意接受。但许多人在成都身上，恰恰在重复这个荒谬的推理。</p>
+    </div>
+    <div class="box flag">
+      <h4>三个不可混为一谈的命题</h4>
+      <div class="datalist">
+        <div class="drow"><span class="k"><b>(a)</b> 同性题材（耽美）创作的产出与消费流量——产量、热度、市场规模</span><span class="v">成都：<em>产量/流量高</em></span></div>
+        <div class="drow"><span class="k"><b>(b)</b> 对同性叙事的包容——公众对同性题材内容本身的态度（而非产量）</span><span class="v">成都：<em>未必高</em></span></div>
+        <div class="drow"><span class="k"><b>(c)</b> 现实同性恋者的接纳——对真实性少数身份、关系与公共可见度的接纳</span><span class="v">成都：<em>全国末段</em></span></div>
+      </div>
+      <p class="small" style="margin-top:14px;">关键一：(a) 的「高」是<strong>产量与流量的高</strong>，它只说明这类内容产出多、有人消费，<strong>完全不说明社会对同性叙事有多高的包容</strong>——正如上方俄罗斯的例子所示，一个国家的耽美书卖得越火，与它对现实同性恋者的限制程度可以是两回事。</p>
+      <p class="small">关键二：命题 (b)(c) 的主语是「公众的态度」，命题 (a) 的主语是「市场的产出」。把 (a) 的「产量高」直接说成 (b) 或 (c) 的「包容度高」，是把「生产了多少」偷换成「接纳了多少」——这是整份论证里最隐蔽、也最常被利用的一次概念偷换。</p>
+    </div>
+    <h3>3.2 逻辑闭合：三个选项，只有一条路走得通</h3>
+    <p>面对「亚文化包容度与同性恋包容度」的关系，逻辑上只有三种可能：</p>
+    <div class="box ok">
+      <h4>选项 A · 分离说（亚文化严格排除同性恋内容）</h4>
+      <p>若「亚文化」严格指与同性恋无关的娱乐亚文化（说唱、街头、二次元等），则「亚文化包容度高」与「同性恋包容度低」可以并行不悖。但这等于承认：<strong>这个「高包容」的亚文化，与同性恋议题毫无关系，不能为「成都对同性恋友好」提供任何证据。</strong>它只是把话题移开了。</p>
+    </div>
+    <div class="box err">
+      <h4>选项 B · 相关说（亚文化高 ⇒ 同性恋包容高）</h4>
+      <p>若「亚文化」包含同性恋内容（耽美、同志社群），则按第二章的规律，「同性恋相关包容度高」应当推出「同性恋整体包容度高」——<strong>但这一条被婚恋调查直接证伪</strong>：成都男性在同性婚姻维度全国垫底。选项 B 不成立。</p>
+    </div>
+    <div class="box ok">
+      <h4>选项 C · 代偿说（现实越封闭，幻想越繁荣）</h4>
+      <p>剩下的唯一通路，也正是证据支持的：<strong>现实同性恋包容度低，与耽美幻想消费的繁荣不仅不矛盾，甚至互为因果</strong>——现实空间越被压缩，情感与欲望越要转移到虚构文本里去。成都完全可以同时是「耽美消费的全国高地」和「现实同性恋接纳度的全国末段」，因为前者的主语是<strong>消费虚构男男爱情的大众</strong>，后者的主语是<strong>现实中的同性恋者</strong>——它们根本不是同一个人群、同一件事。</p>
+    </div>
+    <div class="fig">
+      <svg viewBox="0 0 760 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="概念拆解与代偿机制示意">
+        <defs>
+          <linearGradient id="pa" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#b7a67f"/>
+            <stop offset="1" stop-color="#a08a5e"/>
+          </linearGradient>
+          <linearGradient id="pc" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#b0805e"/>
+            <stop offset="1" stop-color="#8f5f3d"/>
+          </linearGradient>
+        </defs>
+        <!-- subject A -->
+        <text x="60" y="62" font-size="13.5" fill="#a08a5e" font-family="serif">主语一：消费虚构男男爱情的大众（直女为主）</text>
+        <rect x="60" y="76" width="520" height="40" fill="url(#pa)"/>
+        <text x="320" y="101" font-size="13.5" fill="#f4f1ea" text-anchor="middle" font-family="serif">同性题材创作产出/消费流量 —— 成都全国前列</text>
+        <!-- subject C -->
+        <text x="60" y="182" font-size="13.5" fill="#8f5f3d" font-family="serif">主语二：现实中的同性恋者及其权利</text>
+        <rect x="60" y="196" width="230" height="40" fill="url(#pc)"/>
+        <text x="175" y="221" font-size="13.5" fill="#f4f1ea" text-anchor="middle" font-family="serif">现实接纳度 —— 全国末段</text>
+        <!-- feedback arrow -->
+        <path d="M 330 116 C 330 152, 175 156, 175 192" fill="none" stroke="#5f7260" stroke-width="1.6" stroke-dasharray="5 3"/>
+        <path d="M 178 178 L 170 192 L 182 192 Z" fill="#5f7260"/>
+        <text x="300" y="152" font-size="12" fill="#5f7260" font-family="sans-serif">代偿机制：空间越封闭 → 幻想越繁荣</text>
+        <text x="60" y="262" font-size="11.5" fill="#8a847b" font-family="sans-serif">两个主语不是同一个人群。「消费男男爱情故事」≠「接纳现实男同」——前者可以是直女的娱乐，后者才是真正的包容。</text>
+      </svg>
+      <div class="cap"><b>图 2</b> · 概念拆解与代偿机制——高创作产出（而非高包容度）与低现实接纳度为何能同时成立</div>
+    </div>
+    <h3>3.3 证据：为什么「消费男男爱情」不是「接纳男同」</h3>
+    <p>这一断裂有充分的研究支撑：</p>
+    <ul style="margin:18px 0 18px 26px;color:var(--ink-soft);line-height:2;">
+      <li><strong>消费主体是直女。</strong>大量研究显示，耽美读者的主体是异性恋女性——她们消费的是「两个理想男性的爱情」这一美学与情感想象，与「和现实中的同性恋者共处」是两回事。</li>
+      <li><strong>虚构与现实的严重错位。</strong>关于泰式BL受众的研究显示，<strong>78.6%的男同认为BL叙事不能代表现实，而69%的直女观众认为BL是写实的</strong>——直女从虚构文本中读到的「男同」，恰恰是最偏离现实男同生活的那种。</li>
+      <li><strong>消费可以隔绝真实。</strong>学者指出，直女消费酷儿审美文本的同时，往往「切断了与LGBTQ群体真实生活的联结」——她们欣赏的是被商品化、审美化的男男爱情，不是现实中面临催婚、职场歧视、无法公开的男同。</li>
+      <li><strong>「腐女」不等于「同志友好」。</strong>直女可以一边痴迷耽美，一边对现实中的男同冷漠甚至排斥——这两件事在经验上完全兼容，甚至可以同时发生在同一个人身上。</li>
+    </ul>
+    <h3>3.4 代偿机制：为什么二者互为因果</h3>
+    <p>耽美消费的繁荣与现实的压抑，不是巧合的共存，而是有因果的。其机制在于：<strong>当现实中的同性恋公共空间被系统性关闭，关于同性爱情的欲望与想象，就只能转移到虚构文本里去安放。</strong></p>
+    <p>俄罗斯是这一机制最干净的对照组。<strong>《天官赐福》在俄罗斯已经连续两年稳坐小说销量榜首、总销量反超《哈利·波特》系列</strong>，2024 年上半年再以 9200 万卢布（约合 756 万元人民币）登顶俄罗斯图书综合畅销榜——而这个国家同时在做的是：把同性恋宣传入刑、把国际LGBT组织定性为极端组织、让同性恋者在公共空间彻底隐身。<strong>现实越没有出口，虚构就越疯长。</strong>俄罗斯用一整座畅销书市场证明了：耽美卖爆，不是包容的产物，而是压抑的产物。</p>
+    <p>这一机制有直接证据：Sage期刊2026年发表的关于中国BL色情文学的论文《Pure Love and Shadow Desire》明确论证了<strong>审查制度与BL繁荣的共生关系</strong>——审查越严，创作越需要以「纯爱」「宿命羁绊」等伪装形式存在，而读者的欲望恰恰在这种「被禁止的阴影」里被放大。一个细节：2014年晋江把「耽美」栏目改名为「纯爱」，正是为了在审查下生存；而正是在这种审查与伪装的博弈中，耽美文学市场规模突破了百亿元，年均增长15%以上。</p>
+    <div class="box danger">
+      <h4>由此推出一个反直觉、但逻辑闭合的结论</h4>
+      <p><strong>耽美文化的繁荣，不是「社会包容同性恋」的证据，反而常常是「现实同性恋空间被压缩」的症状。</strong>越是禁止公开呈现，幻想越是繁荣——这是压抑的代偿，不是接纳的证明。把它当作「包容」来引用，等于把病人因饥饿而产生的食欲，误认成了营养充足。</p>
+      <p>因此，正确的表述不是「成都的亚文化很包容、只是婚恋维度保守」，而是：<strong>成都最可观察到的只是「同性题材创作的产出与消费流量高」——这是一种以直女为主体、被市场商品化的虚构文本生产现象，既不构成对同性叙事的包容证据，更不构成对现实同性恋者身份与生活的接纳。</strong>把它笼统地称为「包容」，是把「生产了多少男男爱情故事」误认成「接纳了多少男同」；把流量，误认成善意。</p>
+    </div>
+    <div class="note">这一章的修正也回应了第二章的遗留问题：为什么「婚恋维度全国末段」和「民间体感很开放」能同时存在——因为民间体感里的「开放」，测量的对象从来就不是「现实同性恋者的处境」，而是「消费虚构同性爱情内容的自由」。</div>
+    <h3>3.5 理论锚点：为什么耽美消费是「商品化的凝视」而非「现实的接纳」</h3>
+    <p>本章的结论并非孤立的观察，它与两套成熟的社会理论完全吻合，可以互为印证。</p>
+    <div class="cols">
+      <div class="box ok">
+        <h4>女性凝视（Female Gaze）</h4>
+        <p>劳拉·穆尔维（Laura Mulvey）的「男性凝视」理论指出，传统影像中女性是被观看的客体。而BL研究（Pagliassotti, 2012）发现，耽美构成了一个<strong>「女性凝视」的文化空间：女性得以观看、想象男性身体与情感，从「被看者」翻转为「观看者」</strong>，并且不被回看、不卷入异性的权力关系。</p>
+        <p>这一理论直接点破了耽美消费的功能：<strong>它服务的是直女的观看需求与情感代偿，与男同性恋者的现实处境毫无关系</strong>。它是观看结构的翻转，不是权利关系的翻转。</p>
+      </div>
+      <div class="box err">
+        <h4>彩虹资本主义 / 同性恋规范（Rainbow Capitalism / Homonormativity）</h4>
+        <p>丽莎·杜根（Lisa Duggan, 2002）提出「同性恋规范」：一种<strong>不挑战主导异性恋规范、反而维护其制度</strong>的政治；贾斯比尔·普尔（Jasbir Puar, 2007）的「同性民族主义」则揭示了同性恋身份如何被征用为政治与市场工具。「彩虹资本主义」批判更进一步：把酷儿身份<strong>商品化为可消费的符号，剥离其政治与生存意义</strong>。</p>
+        <p>套用到中国语境：耽美市场就是把「男男爱情」<strong>商品化、审美化、去政治化</strong>的最典型样本——消费的是符号化的爱情，回避的是现实中男同的生存问题。Sage期刊2026年论文甚至指出，这种「企业/市场赞助的可见性」恰恰<strong>把酷儿斗争去政治化</strong>了。</p>
+      </div>
+    </div>
+    <p>把两套理论并置，结论不言自明：<strong>成都的耽美繁荣 = 女性凝视 + 彩虹资本主义的本土版本</strong>。它消费的是被剥离了现实指涉的「男男爱情符号」，因此它与「对现实同性恋者的接纳」不仅无关，甚至是它的对立面——越是把同性爱情纯化为消费品，越是回避它作为真实人群处境的严肃性。</p>
+  </div>
+</section>
+<!-- ================= 4 ================= -->
+<section id="s4">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">四</span>
+      <div>
+        <div class="sec-title">政府信任如何塑造「中立」</div>
+        <div class="sec-sub">政府中立与中间派中立——为什么后者是前者的「因变量」</div>
+      </div>
+    </div>
+    <p class="lead">要理解中国性少数的真实处境，只看「禁没禁影视剧」远远不够。这里存在两种经常被混为一谈的「中立」——<strong>政府的「中立」</strong>与<strong>人民（中间派）的「中立」</strong>。前者是一套被官方定义出来的框架，后者则是被这套框架塑造出来的态度。把两者分清楚，整件事的因果链才会显形。</p>
+    <h3>4.1 两种「中立」：一个是定义者，一个是接受者</h3>
+    <p>「政府中立」与「人民中立」听起来像同一件事，其实是两个层次、且方向相反的东西：</p>
+    <table>
+      <thead>
+        <tr><th style="width:15%;"></th><th style="width:42%;">政府的「中立」</th><th>中间派的「中立」</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><b>它是什么</b></td><td>官方的程序性表态：「不支持、不反对、不提倡」，并由一系列具体动作（影视审查、不批准公开活动、无婚姻制度、无反歧视立法）共同构成</td><td>占人口约一半的中间群体的日常态度：「不干涉别人、但也不主动支持」</td></tr>
+        <tr><td><b>谁来定义</b></td><td><b>定义者（自变量）</b>——由官方决定「这件事该被放进哪个框架里理解」</td><td><b>接受者（因变量）</b>——其判断高度依赖官方给出的框架信号</td></tr>
+        <tr><td><b>如何形成</b></td><td>主动选择：把对性少数公共可见度的限制，命名为「内容治理 / 维护秩序 / 保护未成年人」</td><td>被动锚定：在高信任前提下接受这套命名，于是把同样的限制体验为「中立的常规管理」</td></tr>
+        <tr><td><b>实质</b></td><td>程序上「不表态」，结果上维持既有规范的现状——是一种被建构出来的中立</td><td>道德上「不认同」、行动上「不干涉」、制度上「不支持」——是一种被传导出来的中立</td></tr>
+      </tbody>
+    </table>
+    <div class="box danger">
+      <h4>关键：中间派的中立不是独立判断，而是政府框架的「因变量」</h4>
+      <p>很多人默认「人民的态度」是独立形成的，政府只是被动反映民意。但在这件事上方向恰好相反：<strong>是政府先定义了「该怎么看」，高信任度的中间派再据此形成「我怎么看」。</strong>政府把限制同性影视框定为「治理」，中间派就体验为「中立」；若官方换一套框架，中间派的态度也会随之移动。中间派那一半人的立场，本质上是被官方框架锚定的。</p>
+    </div>
+    <h3>4.2 枣核型社会：中间派的态度随政府框架摆动</h3>
+    <p>第二章已经勾勒过中国公众态度的「枣核型」结构：完全接纳的约两成、明确排斥的约三成、剩下约五成是「不干涉但不主动支持」的中间派。<strong>两头小、中间大——真正决定性少数处境的，正是这约五成没有固定立场的中间派。</strong></p>
+    <p>而这五成中间派之所以没有固定立场，是因为他们把「定性权」交给了最受信任的权威。爱德曼「信任晴雨表」显示，中国民众对本国政府的信任度2020年达90%、连续三年居全球主要经济体首位，2024年综合信任指数为79（美国为46）。如此高的信任意味着：<strong>政府的大多数政策行为，在中间派眼中自带「先天的正当性预设」。</strong></p>
+    <div class="box flag">
+      <h4>一条完整的传导链（以同性恋影视为例）</h4>
+      <p style="font-family:var(--serif);font-size:15.5px;text-align:center;padding:6px 0;line-height:2.1;">
+        政府对同性恋影视的态度（审查 / 下架 / 不立项）<br>
+        ↓ 官方把它命名为「内容治理、维护秩序」，而非「群体权利问题」<br>
+        高信任的中间派接受这套命名<br>
+        ↓<br>
+        中间派据此认为：「这只是中立的常规管理，不是针对谁」<br>
+        ↓<br>
+        性少数的公共可见度被持续削减，却没有一环被中间派识别为「不中立」
+      </p>
+      <p><strong>政府对同性恋影视是什么态度，中间派对同性恋就大致是什么态度</strong>——这不是巧合，而是传导的结果。同一道限制，在平权尺度上看是对公共可见度与平等权利的系统性削减（详见4.3），在枣核型社会的中间派看来却只是「中立」。两种判决的落差，正产生于此。</p>
+    </div>
+    <h3>4.3 同一件事，两个参照系，两种判决</h3>
+    <p>以「政府禁止同性恋题材影视剧、限制相关公开内容」为例——这是讨论中反复出现的具体案例。对这件事的定性，完全取决于你站在哪个参照系里：</p>
+    <div class="fig">
+      <svg viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="相对中立与绝对中立双参照系">
+        <!-- frame A -->
+        <rect x="40" y="30" width="330" height="230" fill="#faf8f3" stroke="#b7a67f" stroke-width="1"/>
+        <text x="205" y="58" font-size="14" fill="#a08a5e" text-anchor="middle" font-family="serif" letter-spacing="3">相对参照系（中国内部）</text>
+        <text x="205" y="96" font-size="13" fill="#55504a" text-anchor="middle" font-family="sans-serif">「维护秩序 / 保护未成年人 / 主流管理」</text>
+        <text x="205" y="130" font-size="15.5" fill="#2e2a25" text-anchor="middle" font-family="serif">→ 判定：<tspan fill="#7d8f7e">中 立</tspan></text>
+        <text x="205" y="172" font-size="12.5" fill="#8a847b" text-anchor="middle" font-family="sans-serif">中间派共识：这与「管色情」类似，属于</text>
+        <text x="205" y="194" font-size="12.5" fill="#8a847b" text-anchor="middle" font-family="sans-serif">对社会内容的常规治理，不构成对群体的</text>
+        <text x="205" y="216" font-size="12.5" fill="#8a847b" text-anchor="middle" font-family="sans-serif">敌意——甚至被认为是「大家都这么想」。</text>
+        <!-- frame B -->
+        <rect x="390" y="30" width="330" height="230" fill="#faf8f3" stroke="#b98f86" stroke-width="1"/>
+        <text x="555" y="58" font-size="14" fill="#b98f86" text-anchor="middle" font-family="serif" letter-spacing="3">绝对参照系（平权尺度）</text>
+        <text x="555" y="96" font-size="13" fill="#55504a" text-anchor="middle" font-family="sans-serif">「削减性少数公共可见度 / 无补偿性立法」</text>
+        <text x="555" y="130" font-size="15.5" fill="#2e2a25" text-anchor="middle" font-family="serif">→ 判定：<tspan fill="#b98f86">系统性限制</tspan></text>
+        <text x="555" y="172" font-size="12.5" fill="#8a847b" text-anchor="middle" font-family="sans-serif">从性少数权利清单看：这些举措无一例外地</text>
+        <text x="555" y="194" font-size="12.5" fill="#8a847b" text-anchor="middle" font-family="sans-serif">压制身份与关系的公共呈现，且没有任何</text>
+        <text x="555" y="216" font-size="12.5" fill="#8a847b" text-anchor="middle" font-family="sans-serif">法律层面认可作为对冲——实质层面并不中立。</text>
+        <!-- arrow between -->
+        <line x1="378" y1="145" x2="390" y2="145" stroke="#c9c2b4" stroke-width="1.4"/>
+        <text x="384" y="135" font-size="16" fill="#c9c2b4" text-anchor="middle">→</text>
+      </svg>
+      <div class="cap"><b>图 3</b> · 同一项政策在两种参照系下的不同判决——「相对中立」不等于「绝对中立」</div>
+    </div>
+    <div class="box danger">
+      <h4>核心论点 · 相对中立与绝对中立的差距</h4>
+      <p><strong>「中立」永远是一个相对概念，关键在于参照系。</strong>「不支持不反对」在中国内部框架下看，确实是「中立」——因为主流舆论同样认为公开传播同性关系不妥，政府的限制顺理成章。</p>
+      <p>但放到性少数权益的绝对尺度上，「不支持不反对」实质上等于「不支持」：没有婚姻制度、没有反歧视法、公开可见度被系统性限制、民间偏见不被校正。政府的行为在被中间派解读为「中立」的同时，客观效果是<strong>对性少数公共权利的持续性压制</strong>。</p>
+      <p>所以，「成都包容」的叙事与「不支持不反对」的官方叙事共享同一个机制：<strong>都在相对框架内被认定为「中立」或「温和」，而在绝对框架内呈现出「限制」与「不支持」</strong>。把相对的中立误当作绝对的中立，是最隐蔽的一层自我安慰。</p>
+    </div>
+    <h3>4.4 为什么这种「中立」对性少数格外危险</h3>
+    <p>因为中间派不认为自己「恐同」——他们真心相信自己只是「中立」。这种自我认知意味着：</p>
+    <ul style="margin:18px 0 18px 26px;color:var(--ink-soft);line-height:2;">
+      <li>他们不会主动攻击性少数，但也不会为其发声；</li>
+      <li>他们把「不公开讨论」视为社会和谐，而非对权利的剥夺；</li>
+      <li>当政策进一步收紧时，他们会顺理成章地支持——因为在他们看来，这仍是「治理」而非「压迫」；</li>
+      <li>于是，性少数群体的处境取决于中间派的态度，中间派的态度取决于政府框架，而政府框架对LGBT是限制性的——<strong>整个链条的每一环都自洽，而性少数在这条自洽的链条里没有任何一环被真正保护</strong>。</li>
+    </ul>
+    <h3>4.5 哲学概念工具箱：为什么中间派会把「限制」看成「中立」</h3>
+    <p>「中间派真心认为自己是中立的」——这一心理现象并非偶然，它有坚实的哲学与社会学解释。四个经典概念可以把它说透：</p>
+    <div class="box flag">
+      <h4>① 葛兰西 · 文化霸权（Hegemony）</h4>
+      <p>安东尼奥·葛兰西指出，统治的维系不靠强制，而靠<strong>「同意」</strong>——主导阶级的价值观被内化为社会的「常识」，使被统治者「自愿」认同。中间派对「限制同性恋公开呈现」的顺理成章，正是这种常识化的结果：<strong>它不再被感知为压迫，而被感知为「大家都这么想」的常态。</strong></p>
+      <h4>② 阿尔都塞 · 意识形态召唤（Interpellation）</h4>
+      <p>路易·阿尔都塞提出，意识形态通过「召唤」把个体塑造成主体——当你回应「这是正常的治理」时，你已经<strong>被召唤进那个把限制视为中立的框架</strong>。每一次「我觉得这没什么」的自我确认，都是一次自我塑造。</p>
+      <h4>③ 费斯廷格 · 认知失调（Cognitive Dissonance）</h4>
+      <p>利昂·费斯廷格的理论解释了中间派为何坚持「我不恐同」：如果承认「我支持的制度在限制同性恋」，就会与「我是宽容中立的人」这一自我形象冲突。为消除这种失调，最省力的路径是<strong>主动把限制重新解释为「维护秩序」「保护未成年人」</strong>——不是他们没看见限制，而是看见之后立刻把它翻译成了无害的版本。</p>
+      <h4>④ 罗尔斯 · 程序中立 vs 实质中立</h4>
+      <p>政治哲学中，罗尔斯式的「中立」指国家不在诸种善观念之间偏袒。但严格区分下，<strong>程序上的不偏袒 ≠ 结果上的中立</strong>：一个「不支持不反对」的制度，由于既有的默认结构是异性恋规范，其实际运行结果必然偏向维持现状——这本身就是一种实质上的不中立，只是它把不中立的成本转嫁给了少数群体。</p>
+    </div>
+    <p>四个概念指向同一个结论：<strong>「中立」不是一种被发现的事实，而是一种被建构的自我认知</strong>。它由文化霸权塑造、被意识形态召唤维持、靠认知失调保护，并在程序的掩护下成为实质的不中立。理解了这一层，「相对中立」与「绝对中立」的差距就不再是修辞问题，而是机制问题。</p>
+  </div>
+</section>
+<!-- ================= 5 ================= -->
+<section id="s5">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">五</span>
+      <div>
+        <div class="sec-title">从成都到世界</div>
+        <div class="sec-sub">恐同的普遍性，与滤镜的偏差</div>
+      </div>
+    </div>
+    <p class="lead">把成都放回全球坐标系，会看到一个更有意思的结构：不同国家的「恐同」有完全不同的制度形态，但<strong>「恐同」本身在世界范围内高度趋同</strong>——文化相对主义无法为任何一种形态开脱。</p>
+    <h3>5.1 中俄对照：制度形态不同，公共逻辑一致</h3>
+    <table>
+      <tr><th>维度</th><th>俄罗斯</th><th>中国</th></tr>
+      <tr><td>同性婚姻全国支持率</td><td class="num">约 7%（2019）</td><td class="num">约 40%（2014 城市）</td></tr>
+      <tr><td>法律定性</td><td>全年龄段禁止「非传统性关系宣传」；LGBT运动被最高法院定为极端组织</td><td>无针对身份本身的刑事法条；公共传播层面系统性限制</td></tr>
+      <tr><td>管控对象</td><td>身份、组织、公开表达</td><td>公开传播的内容与作品</td></tr>
+      <tr><td>庇护通道</td><td>存在（俄籍性少数可在部分国家申请政治庇护）</td><td>几乎不存在</td></tr>
+      <tr><td>性别基线</td><td>整体极保守，女性略缓和</td><td>整体中低段，女性显著更开放</td></tr>
+    </table>
+    <p>两国的共同点是：<strong>私人领域可以存在，公共领域要隐身；幻想作品可以在圈层繁荣，但不能走进主流视野。</strong>区别在于俄罗斯以明文法律与组织定性执行，中国以内容管控与默认惯例执行。但就「性少数的公共可见度被系统性压低」这一结果而言，两国高度一致。</p>
+    <h3>5.2 恐同的普遍性：文化相对主义的陷阱</h3>
+    <p>西方部分左翼会以「这是东方的独特文化，不是恐同」来为中国社会的限制开脱；也会有「成都已经证明了中国的包容」式的选择性采信。但这种文化相对主义有两个致命漏洞：</p>
+    <ul style="margin:18px 0 18px 26px;color:var(--ink-soft);line-height:2;">
+      <li><strong>文化的确可以决定表达形式，但恐同的本质——对少数群体身份的贬低与排斥——是跨文化共通的。</strong>没有任何文化语境能让「不干涉但也不保护、且放任偏见玩梗」自动变成「包容」；</li>
+      <li><strong>它混淆了「耽美幻想消费的热闹」与「现实社会的平权」。</strong>耽美网文与动漫的繁荣，恰恰是公共空间被关闭之后的情感代偿——把这种代偿当作现实包容的证据，是一种严重的误读。<strong>俄罗斯就是最刺眼的对照：在第 36 届莫斯科国际书展的 2023 年畅销书榜上，耽美小说《天官赐福》是唯一入选前十的亚洲小说，出版社总经理亲自介绍它是当年俄罗斯最火的系列——同一时期，俄罗斯的司法系统正在把「同性恋宣传」升级为刑事犯罪。</strong>一本禁掉现实、却在虚构市场封神的书，最能说明「创作繁荣」与「权利处境」之间的鸿沟。</li>
+    </ul>
+    <h3>5.3 滤镜的偏差：为什么俄罗斯得到共情，中国没有</h3>
+    <p>国际语境对性少数处境的关注度，从来不是纯粹的人道主义分配，而是被<strong>人种审美与政治叙事</strong>双重扭曲：</p>
+    <div class="box flag">
+      <h4>白人悲情滤镜 vs. 亚洲处境</h4>
+      <p><strong>俄罗斯</strong>的主体民族属于白人范畴，其酷儿处境被包装成「受压迫的悲情白人」——既有政治上的「极权反抗」叙事加成，又踩中欧美男同审美的主流位置，因此获得了远超实际数量的共情与「怜爱式关注」。</p>
+      <p><strong>中国（及东亚）</strong>则处于另一个极端：它只是「遥远的政治他者」，其性少数处境被用作制度论证的工具，却几乎不进入任何人的欲望与审美半径。亚裔女性尚有一层「异域柔美」的刻板印象可供消费；<strong>亚裔男性则在全球审美体系中长期边缘化</strong>——既无白人的正统吸引力，也无拉丁裔、中东裔的「异域性感」标签。</p>
+      <p>结果就是：俄罗斯酷儿的苦难被审美化为魅力，中国酷儿的苦难被政治化为新闻。<strong>平权话语的优先级，永远让位于审美与欲望的优先级。</strong></p>
+    </div>
+    <p>这同时解释了「选择性听一半」的心理机制：人们需要符号化的乌托邦来安放期待——西方同志把俄罗斯想象成悲情美人，中国网友把成都想象成同志天堂。两者都不是真相，而是<strong>各自叙事需要的情感出口</strong>。真正处境艰难的那群人，既被审美化消费，又被政治化利用，或被选择性遗忘。</p>
+    <h3>5.4 理论深化：东方主义与白色凝视</h3>
+    <p>5.3 节描述的「共情不对等」，同样有成熟的批判理论可作锚点。</p>
+    <div class="box flag">
+      <h4>萨义德 · 东方主义（Orientalism）</h4>
+      <p>爱德华·萨义德1978年指出，西方通过一整套「东方学」话语，把「东方」建构成<strong>异质的、停滞的、可被描述与消费的他者</strong>。投射到性少数议题上：中国的酷儿处境被「东方化」为「独特的文化现象」而非「普世的人权议题」——这正是文化相对主义为恐同开脱的知识根源。同样是限制，发生在俄罗斯被视为「极权对自由的压迫」（值得愤怒），发生在中国则被视为「东方文化的特殊性」（值得理解）。<strong>同一件事，因对象在东方主义坐标系里的位置不同，而获得完全不同的道德权重。</strong></p>
+      <h4>白色凝视 / 白人性（Whiteness）</h4>
+      <p>白人性研究揭示：白色不仅是一种肤色，更是一套<strong>未被标记的规范</strong>——白人的苦难天然被视为「人类的苦难」，而亚裔的苦难总需要额外的解释才能被看见。俄罗斯酷儿的处境因为落在「白人悲情」的框架内而自动获得普世共情；亚裔酷儿的处境则永远需要先被翻译、被论证、被证明「值得关注」。共情不是按需分配的，而是<strong>按种族化的欲望秩序分配的</strong>。</p>
+    </div>
+    <p>把东方主义与白色凝视并置，5.3 节的现象就有了理论根基：<strong>「白人悲情滤镜」之所以存在，是因为白人性本身就是被默认的普世标准；「中国的处境无人共情」，是因为东方主义把中国预置为需要被理解而非被共情的他者。</strong>两者共同构成了国际语境里「共情分配」的底层算法。</p>
+  </div>
+</section>
+<!-- ================= 6 ================= -->
+<section id="s6">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">六</span>
+      <div>
+        <div class="sec-title">结语</div>
+      </div>
+    </div>
+    <p class="lead">回到最初的问题：「成都真的很包容吗？」——答案取决于你问的是哪一个成都。</p>
+    <p>如果你问的是<strong>夜生活的成都</strong>、<strong>耽美幻想消费的成都</strong>、<strong>年轻人娱乐场景里的成都</strong>——是的，它确实相对宽松，这是真实且值得珍视的。</p>
+    <p>如果你问的是<strong>婚姻观念里的成都</strong>、<strong>主流性别秩序里的成都</strong>、<strong>对现实同性恋者接纳度里的成都</strong>——它的保守度处于全国末段，这也是真实的。</p>
+    <p>两个成都同时存在，互不矛盾。真正有问题的，是<strong>把前一个成都的整体印象，偷换为后一个成都的整体结论</strong>——用「消费男男爱情故事的自由」冒充「接纳现实同性恋者的诚意」，用圈层的热闹掩盖制度的沉默，用「不干涉」冒充「接纳」，用相对的中立冒充绝对的中立。</p>
+    <div class="pull">
+      「包容」从来不是一句标签，而是一系列可检验的指标：制度是否保障，公共空间是否可见，偏见是否被校正。当这三项都缺席时，仅剩的「不干涉」，只是不作为的另一种写法。
+    </div>
+    <p style="color:var(--ink-soft);">这份拆解的目的，不是断言某个城市「恐同」，而是说明一个方法论：<strong>在讨论任何「包容」之前，先问清楚——你说的包容，是哪一层？测量它的数据，是不是同一把尺子？你站立的参照系，是相对的，还是绝对的？</strong>这三个问题，比任何结论都更重要。</p>
+  </div>
+</section>
+<!-- ================= SOURCES ================= -->
+<footer class="wrap" id="src">
+  <h3 style="margin-top:0;">参考文献与数据来源</h3>
+  <p class="src" style="margin-bottom:26px;">以下按主题分组列出正文引用的事实来源与理论锚点，可点击链接直达原文或权威转述。</p>
+  <h3 style="font-size:16px;color:var(--sage-deep);">A. 中国公众态度数据</h3>
+  <p class="src">
+    1. 世纪佳缘 × 中科院 第五期《中国男女婚恋观调查报告》（2015-09，全国32省份、有效样本83250份）。成都男性具体数字（近半认为同性恋是「扭曲的心理变态」、同性婚姻反对率40%「远远高于全国其他地区」、被判定为「全国最不能接受同性恋的人群」）逐字见于上观新闻/中青网 — <a href="https://whb.cn/zhuzhan/kandian/20150925/38226_3.html">whb.cn/zhuzhan/kandian/20150925/38226_3.html</a>；全国男女均值、山东/南京/广州对照见新浪女性全文 — <a href="https://eladies.sina.cn/feel/love/2015-09-25/detail-ifxifmki9510545.d.html">eladies.sina.cn（第五期报告全文）</a>；红网报道 — <a href="https://news.sina.com.cn/o/2015-09-25/doc-ifxieynu2300561.shtml">news.sina.com.cn/o/2015-09-25/doc-ifxieynu2300561.shtml</a><br>
+    2. 加州大学威廉姆斯研究所《Positive Attitudes Toward LGBTQ People in China》（2024-05），网易转述（社会接纳53%、职场公平62%、同性婚姻52%、邻里46%、媒体内容45%等）— <a href="https://www.163.com/dy/article/J907CA1O052880KM.html">www.163.com/dy/article/J907CA1O052880KM.html</a><br>
+    3. 2014 首份中国LGBT社会环境调查（荷兰在线转载）：59%认为社会应接受同性恋、40%城市人群支持同性婚姻合法化 — <a href="http://m.toutiao.com/group/3713725280/">m.toutiao.com/group/3713725280/</a><br>
+    4. 中国综合社会调查（CGSS）2015：58.4%不同意「同性恋是个人的事，他人不应指责」— <a href="http://m.toutiao.com/group/6827784205657702926/">m.toutiao.com/group/6827784205657702926/</a><br>
+    5. UNDP《中国性少数群体生存状况》（2017）：21%职场歧视、仅5.4%完全公开出柜、70%以上有心理困扰 — <a href="https://www.163.com/dy/article/J907CA1O052880KM.html">同信源 2</a><br>
+    6. 李银河 2007 全国大中城市抽样调查（维度分离核心数据）：就业机会91% vs 人格平等80% vs 影视公开播放约55:45 — <a href="http://eladies.sina.com.cn/column/liyinhe/20080628/9.shtml">eladies.sina.com.cn/column/liyinhe/20080628/9.shtml</a>；<a href="https://www.chinanews.com.cn/sh/2011/07-09/3170031.shtml">中新网：李银河谈中国宽容度</a>；道德评价数据（20.8%完全没错 / 37.8%完全错误）— <a href="http://views.ce.cn/view/ent/201505/25/t20150525_5450341.shtml">中国经济网</a><br>
+    7. 李银河：中国公众接受度较高、官方态度保守（2020 南方周末访谈）— <a href="http://m.toutiao.com/group/6834741945273680397/">m.toutiao.com/group/6834741945273680397/</a><br>
+    8. 世界价值观调查（WVS）中国数据：仅7%认为同性恋「完全正当」；跨国民调「中国75%不介意同性恋邻居 vs 全球仅32%支持同性婚姻平等」— <a href="http://m.toutiao.com/group/6285891304795275521/">m.toutiao.com/group/6285891304795275521/</a><br>
+    9. 「成都 GAY 都」叙事谱系：2006《揭秘中国第一「GAY 都」》— <a href="http://news.sohu.com/20061031/n246115265.shtml">news.sohu.com/20061031/n246115265.shtml</a>；2009《中国同性恋最多的十大城市排行榜》— <a href="https://fashion.ifeng.com/life/culture/200906/0612_52_1200273_1.shtml">fashion.ifeng.com（凤凰网）</a>；2002 成都同志关爱小组 — <a href="https://qingdaonews.com/content/2005-09/29/content_5450991.htm">青岛新闻网转成都商报</a>；学术专著 魏伟《公开：当代成都「同志」空间的形成和变迁》（上海三联，2012）— <a href="https://book.douban.com/subject/20276019/">豆瓣图书条目</a>；外网再生产 GayOut「China's Most Openly Gay City」— <a href="https://www.gayout.com/asia-aus/china/chengdu">gayout.com/asia-aus/china/chengdu</a>
+  </p>
+  <h3 style="font-size:16px;color:var(--sage-deep);">B. 耽美消费与现实接纳之断裂</h3>
+  <p class="src">
+    9. 泰式BL受众研究：78.6%男同认为BL叙事失实 vs 69%直女认为写实 — <a href="https://www.researchgate.net/publication/374409617_Boys_Love_Media_in_Thailand_Celebrity_Fans_and_Transnational_Asian_Queer_Popular_Culture">researchgate.net/publication/374409617</a><br>
+    10. 直女消费酷儿文本「切断与LGBTQ真实生活联结」— <a href="https://onlinelibrary.wiley.com/doi/10.1111/jpcu.70038?af=R">onlinelibrary.wiley.com/doi/10.1111/jpcu.70038</a><br>
+    11. 耽美读者以异性恋女性为主、消费主体结构 — <a href="https://m.thepaper.cn/wifiKey_detail.jsp?contid=12080074">澎湃·耽改剧与大众审美</a><br>
+    12. 女性凝视（Female Gaze）与BL：Pagliassotti (2012) 相关综述 — <a href="https://webofnothing.org/uploads/1774548308224-841033792.pdf">webofnothing.org（BL女性凝视综述）</a>；<a href="https://ijoc.org/index.php/ijoc/article/download/14443/3597/0">IJOC《A Relational Equality Bias》（BL读者为异性恋年轻女性之实验研究）</a>；<a href="http://www.ejumpcut.org/archive/onlinessays/JC40folder/straightWmGayPorn.html">EJumpCut《Straight Women, Gay Porn》（直女借男同凝视）</a><br>
+    13. 代偿机制 / 审查与BL繁荣共生：Sage 2026《Pure Love and Shadow Desire: Navigating Censorship, Queer Fantasy and Ressentiment in Chinese BL Erotica》（晋江2014年「耽美」改名「纯爱」）— <a href="https://journals.sagepub.com/doi/full/10.1177/13675494261421517">journals.sagepub.com/doi/full/10.1177/13675494261421517</a><br>
+    14. 中国耽美文学市场规模破百亿、年均增长15%以上 — <a href="https://www.adquan.com/article/352869">adquan.com/article/352869</a><br>
+    15. 俄罗斯耽美销量实证（「创作多≠包容度高」核心数据）：《天官赐福》前三部连续两年居俄罗斯小说销量榜首、总销量反超《哈利·波特》系列，2024上半年以9200万卢布（约756万元人民币）登顶综合畅销榜第一 — <a href="https://m.sohu.com/a/804329596_121418230">中国出版传媒商报（2024-08-28）</a>；前三卷总发行量超50万册、第36届莫斯科书展唯一入选前十的亚洲小说 — <a href="https://k.sina.cn/article_6423803379_17ee375f3001017sfl.html">新浪·参考消息报（2023-10）</a>；2023年度畅销书榜首、2022年第四卷首印12万册 — <a href="http://www.rmhb.com.cn/zt/ydyl/202501/t20250121_800390525.html">人民画报（2025-01）</a>；RT专访译者：连续两年位居小说销量榜首 — <a href="https://m.acfun.cn/communityCircle/508943">AcFun转RT报道</a><br>
+    16. 俄罗斯同性婚姻全国支持率约7%（2019列瓦达中心/综合民调），与《天官赐福》霸榜对照 — 见正文第五章对照表及 <a href="http://m.toutiao.com/group/6285891304795275521/">跨国民调综合</a>
+  </p>
+  <h3 style="font-size:16px;color:var(--sage-deep);">C. 批判理论锚点</h3>
+  <p class="src">
+    15. 彩虹资本主义 / 同性恋规范：Lisa Duggan (2002)《The Twilight of Equality?》「homonormativity」概念 — <a href="https://journals.sagepub.com/doi/10.1177/13634607261426692">Sage《Heroes, Icons, and Homonormativity》</a>；<a href="https://www.querr.me/en/theory/queer-liberation-from-stonewall-to-rainbow-capitalism/177">querr.me《From Stonewall to Rainbow Capitalism》</a>；<a href="https://thrivabilitymatters.org/pinkwashing-the-pink-tax-and-rainbow-capitalism/?print=pdf">THRIVE《Pinkwashing & Rainbow Capitalism》</a>；Jasbir Puar (2007)《Terrorist Assemblages》「homonationalism」— <a href="https://scholarship.claremont.edu/cgi/viewcontent.cgi?article=3452&context=scripps_theses">Claremont 论文</a><br>
+    16. 东方主义：Edward Said (1978)《Orientalism》（经典著作）；白色凝视 / 白人性研究（whiteness studies，通识性理论来源）<br>
+    17. 文化霸权：Antonio Gramsci《狱中札记》；意识形态召唤：Louis Althusser《意识形态与意识形态国家机器》；认知失调：Leon Festinger (1957)《A Theory of Cognitive Dissonance》；程序中立 vs 实质中立：John Rawls《Political Liberalism》（以上均为经典理论文献，可通过任何学术数据库检索原文）<br>
+    18. 爱德曼「信任晴雨表」：2020年中国政府信任度90% — <a href="http://m.toutiao.com/group/6802003572293632525/">m.toutiao.com/group/6802003572293632525/</a>；2024年综合信任指数79（美国46） — <a href="http://m.toutiao.com/group/7405149942568567334/">m.toutiao.com/group/7405149942568567334/</a>
+  </p>
+  <p class="src small" style="margin-top:30px;">核验与口径说明：① 正文「成都男性反对率40%+、全国垫底」为讨论中引用的婚恋平台调查口径，原始分省图表未能在公开渠道逐一复核，但已核验的同一调查数据（西南地区男性对同性婚姻反对率约33%、全国男性反对率35%）支撑同一结论方向；② 图1为示意性趋势图，用于表达跨国正相关关系，非具体国家数据的精确散点；③ 所有百分比均标注了对应年份与信源，使用时请注意口径差异；④ 第三章「亚文化」概念拆解（耽美幻想消费 / 娱乐亚文化 / 现实接纳三个命题）为对原稿逻辑缺陷的修正，相关证据见参考文献 B 组；⑤ 第四章哲学概念（文化霸权、意识形态召唤、认知失调、程序/实质中立）与第五章批判理论（东方主义、白人性）均为学界通行的经典理论框架，用于为经验观察提供解释结构，非对具体事件的直接论断。</p>
+  <div class="sign">成都「包容」的假象 &nbsp;·&nbsp; 一份基于数据、逻辑与理论的拆解 &nbsp;·&nbsp; 2026</div>
+</footer>
+</body>
+</html>
