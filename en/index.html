@@ -32,8 +32,8 @@
     --dustyblue:    #71808e;
     --dustyrose:    #b98f86;
     --gold:         #b7a67f;
-    --serif: "Noto Serif SC","Source Han Serif SC","Songti SC",STSong,SimSun,Georgia,serif;
-    --sans:  "Noto Sans SC","PingFang SC","Source Han Sans SC","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    --serif: "Noto Serif SC","Source Han Serif SC",Georgia,"Times New Roman",serif;
+    --sans:  "Noto Sans SC","Source Han Sans SC",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
   }
   *{margin:0;padding:0;box-sizing:border-box;}
   html{scroll-behavior:smooth;}
@@ -56,6 +56,13 @@
   .langbar a{color:var(--ink-faint);text-decoration:none;border-bottom:1px solid var(--hairline);transition:color .2s;}
   .langbar a:hover{color:var(--terracotta);}
   .langbar .cur{color:var(--sage-deep);border-bottom-color:var(--sage-deep);font-weight:600;}
+  /* ===== Paper-PDF buttons (screen only; hidden in print) ===== */
+  .pdfbar{display:flex;gap:12px;flex-wrap:wrap;margin:26px 0 4px;}
+  .pdfbtn{font-family:var(--sans);font-size:13px;letter-spacing:0.05em;text-decoration:none;padding:9px 18px;border-radius:3px;border:1px solid var(--sage-deep);color:#fbfaf6;background:var(--sage-deep);transition:all .2s;cursor:pointer;display:inline-block;}
+  .pdfbtn:hover{background:var(--terracotta);border-color:var(--terracotta);color:#fff;}
+  .pdfbtn.ghost{background:transparent;color:var(--sage-deep);}
+  .pdfbtn.ghost:hover{color:var(--terracotta);border-color:var(--terracotta);background:transparent;}
+  @media print{ .pdfbar,.langbar{display:none!important;} }
   /* ============ HERO ============ */
   .hero{
     padding:70px 0 60px;
@@ -215,6 +222,11 @@
 <header class="wrap hero">
   <div class="kicker">Observation &nbsp;·&nbsp; Data &nbsp;·&nbsp; Logic</div>
   <h1>Why the Left Loves to Manufacture "Gaydu"<br><span class="alt">— Chengdu Men Top China in Opposing Same-Sex Marriage</span></h1>
+  <div class="pdfbar">
+    <a class="pdfbtn" href="../papers/chengdu-tolerance-zh.pdf" download>Download the paper (PDF · Chinese · A4 · 20pp)</a>
+    <a class="pdfbtn ghost" href="../paper.html">Paper page</a>
+    <button class="pdfbtn ghost" onclick="window.print()">Print this page</button>
+  </div>
   <p class="lede">"Chengdu is very tolerant of gay people" is one of the most widely circulated city narratives on the Chinese internet. But a nationally comparable survey reaches the opposite conclusion: <strong>in the dimension of marriage and family, Chengdu men rank dead last in China in tolerance toward gay people.</strong> This essay does three things: state the buried conclusion plainly; dismantle every rhetorical device used to dissolve it; and draw the line that was never drawn between "a lot of creative output" and "a high degree of tolerance."</p>
   <div class="box danger" style="max-width:680px;margin:0 0 40px;">
     <h4>Core conclusions</h4>
@@ -838,6 +850,11 @@
   </p>
   <p class="src small" style="margin-top:30px;">Verification and caliber notes: ① The "Chengdu male opposition 40%+ / national bottom" figures are the dating-platform survey caliber cited in discussion; the original province-by-province charts could not be individually re-verified publicly, but verified data from the same survey (Southwest male opposition to same-sex marriage ≈33%; national male opposition 35%) support the same conclusion direction; ② Fig. 1 is a schematic trend line expressing the cross-national positive correlation, not a precise scatter of specific country data; ③ All percentages note their year and source; mind the caliber differences when quoting; ④ Chapter III's disaggregation of "subculture" (danmei fantasy consumption / entertainment subculture / real acceptance — three propositions) is a correction of the original draft's logical flaw; supporting evidence in reference group B; ⑤ Chapter IV philosophical concepts (cultural hegemony, interpellation, cognitive dissonance, procedural/substantive neutrality) and Chapter V critical theory (Orientalism, whiteness) are standard theoretical frameworks in the field, used to provide explanatory structure for empirical observation, not direct assertions about specific events; ⑥ The events in Chapter VI are all public reporting (2017 review regulations, 2021 halt on danmei adaptations, 2022 Mo Dao Zu Shi removal, the 2025-09 <em>Together</em> AI face-swap incident, 2025-11 Blued/Finka removal, 2026-07 show-group campaign); <em>Together</em>'s alteration details and NEON's condemnation appear in the international original reports listed above, and event dates and film details are subject to those original reports; ⑦ The English-language sources for the "Gaydu" narrative in Chapter VI (Sixth Tone, Unveil China, Utopia-asia, Gandolfi) are directly accessible originals, and the "almost invisible" sentence on Utopia-asia is a verbatim quote.</p>
   <div class="sign">The Myth of Chengdu's "Tolerance" &nbsp;·&nbsp; A deconstruction grounded in data, logic, and theory &nbsp;·&nbsp; 2026</div>
+  <div class="pdfbar" style="margin-top:30px;">
+    <a class="pdfbtn" href="../papers/chengdu-tolerance-zh.pdf" download>Download the paper (PDF · Chinese · A4 · 20pp)</a>
+    <button class="pdfbtn ghost" onclick="window.scrollTo({top:0,behavior:'smooth'})">Back to top</button>
+    <button class="pdfbtn ghost" onclick="window.print()">Print this page</button>
+  </div>
 </footer>
 </body>
 </html>
