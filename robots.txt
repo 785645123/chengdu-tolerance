@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://785645123.github.io/chengdu-tolerance/sitemap.xml
+Sitemap: https://chengdu-tolerance.pages.dev/sitemap.xml
